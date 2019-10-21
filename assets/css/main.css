@@ -4,11 +4,38 @@
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
 .main-div {
   height: 100vh;
   width: 100vw;
   position: relative;
-  background: #3c3c3c;
+  /* background: #3c3c3c; */
+  background: #090821;
+}
+
+.top-bar {
+  padding: 2%;
+  width: 100vw;
+  height: 8%;
+  top: 5%;
+}
+
+.bar-element {
+  margin: 1% 1%;
+  background: gray;
+  color: white;
 }
 
 #quote {
@@ -26,4 +53,135 @@
 #quote:hover {
   color: #b5b3b3;
   transform: scale(1.1);
+}
+
+/* cssfx.dev animations */
+
+button {
+  z-index: 1;
+  position: relative;
+  font-size: inherit;
+  font-family: inherit;
+  color: white;
+  padding: 0.5em 1em;
+  outline: none;
+  border: none;
+  background-color: hsl(236, 32%, 26%);
+}
+
+button::before {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fc2f70;
+  transform-origin: center bottom;
+  transform: scaleY(0);
+  transition: transform 0.25s ease-in-out;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button:hover::before {
+  transform-origin: center top;
+  transform: scaleY(1);
+}
+
+
+/* Search box css */
+
+.search-box-div {
+  /* display: inline-block; */
+  position: relative;
+  text-align: center;
+  width: 10em;
+  margin: 0 auto;
+
+  /* right: 2%; */
+}
+
+.search-box {
+  width: 9em;
+  color: white;
+  font-size: inherit;
+  font-family: inherit;
+  background-color: hsl(236, 32%, 26%);
+  padding: 0.35em 0.45em;
+  border: 1px solid transparent;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.search-box:focus {
+  outline: none;
+}
+
+.search-box::placeholder {
+  color: hsla(0, 0%, 100%, 0.6);
+}
+
+.search-box ~ span {
+  position: absolute;
+  background-color: #3cefff;
+  transition: transform 0.5s ease;
+}
+
+.bottom,
+.top {
+  height: 1px;
+  left: 0;
+  right: 0;
+  transform: scaleX(0);
+}
+
+.left,
+.right {
+  width: 1px;
+  top: 0;
+  bottom: 0;
+  transform: scaleY(0);
+}
+
+.bottom {
+  bottom: 0;
+  transform-origin: bottom right;
+}
+
+.search-box:focus ~ .bottom {
+  transform-origin: bottom left;
+  transform: scaleX(1);
+}
+
+.right {
+  right: 0;
+  transform-origin: top right;
+}
+
+.search-box:focus ~ .right {
+  transform-origin: bottom right;
+  transform: scaleY(1);
+}
+
+.top {
+  top: 0;
+  transform-origin: top left;
+}
+
+.search-box:focus ~ .top {
+  transform-origin: top right;
+  transform: scaleX(1);
+}
+
+.left {
+  left: 0;
+  transform-origin: bottom left;
+}
+
+.search-box:focus ~ .left {
+  transform-origin: top left;
+  transform: scaleY(1);
 }
