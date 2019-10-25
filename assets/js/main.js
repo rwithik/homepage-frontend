@@ -11,7 +11,7 @@ const getQuote = () => {
   })
     .then(function (response) {
       console.log(response);
-      document.getElementById('quote').innerHTML = response.data.quote.text;
+      document.getElementById('quote').innerHTML = response.data.quote.fulltext;
     })
     .catch(function (error) {
       console.error(error);
