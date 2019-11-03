@@ -42,7 +42,7 @@ html,body
 
 #quote {
   font-family: 'ZCOOL XiaoWei', serif;
-  text-shadow: 2px 2px 5px #ffffff;
+  text-shadow: 2px 2px 5px #ffffff9f, -2px -2px 5px #ffffff9f;
   font-size: 26px;
   text-align: center;
   color: #ffebeb;
@@ -58,6 +58,7 @@ html,body
 #quote:hover {
   color: #b5b3b3;
   transform: scale(1.1);
+  text-shadow: 2px 2px 7px #ffffff77, -2px -2px 7px #ffffff77;
 }
 
 /* cssfx.dev animations */
