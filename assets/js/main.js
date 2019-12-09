@@ -1,7 +1,5 @@
 // API_ROOT = 'http://localhost:3000/'
-API_ROOT = 'https://evening-river-46814.herokuapp.com/'
-// const search_box = ;
-
+API_ROOT = 'https://evening-river-46814.herokuapp.com/';
 
 const getQuote = () => {
   axios.get(API_ROOT + 'quote',{

@@ -1,9 +1,9 @@
 * {
-  /* font-family: 'Dancing Script', cursive; */
   font-family: 'Poppins', sans-serif;
   font-size: 13px;
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 a {
@@ -12,18 +12,15 @@ a {
 
 html,body
 {
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-    overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
 }
 
 .main-div {
   height: 100vh;
   width: 100vw;
   position: relative;
-  /* background: #3c3c3c; */
   background: #090821;
 }
 
@@ -32,12 +29,10 @@ html,body
   width: 100vw;
   height: 8%;
   top: 5%;
-}
-
-.bar-element {
-  margin: 1% 1%;
-  background: gray;
-  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 #quote {
@@ -57,13 +52,12 @@ html,body
 
 #quote:hover {
   color: #b5b3b3;
-/*  transform: scale(1.1); */
   text-shadow: 2px 2px 7px #ffffff77, -2px -2px 7px #ffffff77;
 }
 
 /* cssfx.dev animations */
 
-button {
+.nav-link {
   z-index: 1;
   position: relative;
   font-family: inherit;
@@ -71,10 +65,11 @@ button {
   padding: 0.5em 1em;
   outline: none;
   border: none;
+  margin: 0 0.5em;
   background-color: hsl(236, 32%, 26%);
 }
 
-button::before {
+.nav-link::before {
   content: '';
   z-index: -1;
   position: absolute;
@@ -88,7 +83,7 @@ button::before {
   transition: transform 0.25s ease-in-out;
 }
 
-button:hover {
+.nav-link:hover {
   cursor: pointer;
 }
 
@@ -101,24 +96,20 @@ button:hover::before {
 /* Search box css */
 
 .search-box-div {
-  /* display: inline-block; */
   position: relative;
   text-align: center;
   width: 10em;
-  margin: 0 auto;
-
-  /* right: 2%; */
+  margin: 5rem auto;
 }
 
 .search-box {
-  width: 9em;
+  width: 100%;
   color: white;
   font-size: inherit;
   font-family: inherit;
   background-color: hsl(236, 32%, 26%);
   padding: 0.35em 0.45em;
   border: 1px solid transparent;
-  transition: background-color 0.3s ease-in-out;
 }
 
 .search-box:focus {
