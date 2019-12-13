@@ -1,39 +1,55 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/main.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Poppins|ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins|ZCOOL+XiaoWei&display=swap"
+      rel="stylesheet"
+    />
     <title>Home</title>
   </head>
   <body>
+    <div class="top-bar">
+      <a href="https://reddit.com"><button class="nav-link">reddit</button></a>
+      <a href="https://github.com"><button class="nav-link">github</button></a>
+      <a href="https://youtube.com"
+        ><button class="nav-link">youtube</button></a
+      >
+      <a href="https://web.whatsapp.com"
+        ><button class="nav-link">whatsapp</button></a
+      >
+      <a href="https://open.spotify.com"
+        ><button class="nav-link">spotify</button></a
+      >
+      <a href="https://classroom.google.com/u/2"
+        ><button class="nav-link">classroom</button></a
+      >
+    </div>
     <div class="main-div">
-
-      <div class="top-bar">
-        <a href="https://reddit.com"><button class="nav-link">reddit</button></a>
-        <a href="https://github.com"><button class="nav-link">github</button></a>
-        <a href="https://youtube.com"><button class="nav-link">youtube</button></a>
-        <a href="https://web.whatsapp.com"><button class="nav-link">whatsapp</button></a>
-        <a href="https://open.spotify.com"><button class="nav-link">spotify</button></a>
-        <a href="https://classroom.google.com/u/2"><button class="nav-link">classroom</button></a>
-      </div>
-
       <div class="search-box-div">
-      <form action="https://www.duckduckgo.com" method="get">
-        <input class="search-box" type="text" name="q" placeholder="Search" autocomplete="off" autofocus>
-        <span class="bottom"></span>
-        <span class="right"></span>
-        <span class="top"></span>
-        <span class="left"></span>
-      </form>
-
+        <form action="https://www.duckduckgo.com" method="get">
+          <input
+            class="search-box"
+            type="text"
+            name="q"
+            placeholder="Search"
+            autocomplete="off"
+            autofocus
+          />
+          <span class="bottom"></span>
+          <span class="right"></span>
+          <span class="top"></span>
+          <span class="left"></span>
+        </form>
       </div>
-      <div id="quote">
-      </div>
+      <!-- <div class="gh-pages-div">
+        <form action=""><input type="text" class="gh-pages"></form>
+      </div> -->
+      <div id="quote"></div>
     </div>
   </body>
   <footer>
     <script src="./assets/js/main.js"></script>
   </footer>
-
 </html>
