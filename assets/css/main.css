@@ -1,3 +1,9 @@
+/* Todo: remove unused CSS */
+
+:root {
+  --clr-bg: #090821;
+}
+
 * {
   font-family: "Poppins", sans-serif;
   font-size: 13px;
@@ -15,7 +21,7 @@ body {
   width: 100%;
   height: 100%;
   overflow-x: hidden;
-  background: #090821;
+  background: var(--clr-bg);
 }
 
 .main-div {
@@ -26,6 +32,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  margin-top: 5em;
 }
 
 .top-bar {
@@ -95,89 +102,92 @@ button:hover::before {
 
 /* Search box css */
 
-.search-box-div {
+.input-div {
   position: relative;
   text-align: center;
   width: 14em;
-  margin: 5rem auto;
+  margin: 1rem auto 2em auto;
 }
 
-.search-box {
+.input {
   width: 100%;
   color: white;
   font-size: inherit;
   font-family: inherit;
-  background-color: hsl(236, 32%, 26%);
+  background-color: hsl(235, 42.9%, 11%);
+  /* background-color: var(--clr-bg); */
   padding: 0.35em 0.45em;
   border: 1px solid transparent;
 }
 
-.search-box:focus {
+.input:focus {
   outline: none;
 }
 
-.search-box::placeholder {
+.input::placeholder {
   color: hsla(0, 0%, 100%, 0.6);
 }
 
-.search-box ~ span {
+.input ~ span {
   position: absolute;
-  background-color: #3cefff;
+  /* background-color: #3cefff; */
+  background-image: linear-gradient(to left, #3cefff, transparent);
   transition: transform 0.5s ease;
 }
 
-.bottom,
-.top {
+span.bottom,
+span.top {
   height: 1px;
   left: 0;
   right: 0;
   transform: scaleX(0);
 }
 
-.left,
-.right {
+span.left,
+span.right {
   width: 1px;
   top: 0;
   bottom: 0;
   transform: scaleY(0);
 }
 
-.bottom {
+span.bottom {
+  height: 2px;
   bottom: 0;
   transform-origin: bottom right;
 }
 
-.search-box:focus ~ .bottom {
+.input:focus ~ span.bottom {
   transform-origin: bottom left;
   transform: scaleX(1);
 }
 
-.right {
+span.right {
   right: 0;
   transform-origin: top right;
 }
 
-.search-box:focus ~ .right {
+.input:focus ~ span.right {
   transform-origin: bottom right;
   transform: scaleY(1);
 }
 
-.top {
+span.top {
   top: 0;
   transform-origin: top left;
 }
 
-.search-box:focus ~ .top {
+.input:focus ~ span.top {
   transform-origin: top right;
   transform: scaleX(1);
 }
 
-.left {
+span.left {
   left: 0;
   transform-origin: bottom left;
 }
 
-.search-box:focus ~ .left {
+.input:focus ~ span.left {
   transform-origin: top left;
   transform: scaleY(1);
 }
