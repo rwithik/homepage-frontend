@@ -107,6 +107,7 @@ button:hover::before {
   text-align: center;
   width: 14em;
   margin: 1rem auto 2em auto;
+  overflow: hidden;
 }
 
 .input {
@@ -132,9 +133,23 @@ button:hover::before {
   position: absolute;
   /* background-color: #3cefff; */
   background-image: linear-gradient(to left, #3cefff, transparent);
-  transition: transform 0.5s ease;
+  transition: transform 0s ease;
 }
 
+span.bottom {
+  height: 2px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  transform: translateX(-100%);
+}
+
+input:focus ~ span.bottom {
+  transform: translateX(100%);
+  transition: transform 1.2s ease;
+}
+
+/* 
 span.bottom,
 span.top {
   height: 1px;
@@ -191,3 +206,4 @@ span.left {
   transform-origin: top left;
   transform: scaleY(1);
 }
+ */
