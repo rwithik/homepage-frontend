@@ -26,3 +26,15 @@ document
     e.preventDefault();
     document.location = `https://${GITHUB_USERNAME}.github.io/${e.target[0].value}`;
   });
+
+document
+  .querySelector(".input-div.gh-repo-div>form")
+  .addEventListener("submit", e => {
+    e.preventDefault();
+    let repo = e.target[0].value;
+    if (repo.indexOf("/") == -1) {
+      document.location = `https://github.com/${GITHUB_USERNAME}/${repo}`;
+    } else {
+      document.location = `https://github.com/${repo}`;
+    }
+  });
